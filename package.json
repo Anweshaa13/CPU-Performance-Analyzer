@@ -1,0 +1,13 @@
+{
+  "name": "cpu-performance-analyzer",
+  "private": true,
+  "version": "2.0.0",
+  "description": "CPU Performance Analyzer - full-stack CO major project",
+  "scripts": {
+    "setup": "node scripts/setup.cjs",
+    "dev": "node scripts/dev.cjs",
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "python -m uvicorn app.main:app --reload --port 8000 --app-dir backend",
+    "build": "npm --prefix frontend run build"
+  }
+}

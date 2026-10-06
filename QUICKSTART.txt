@@ -1,0 +1,24 @@
+CPU PERFORMANCE ANALYZER 2.0 — QUICK START
+
+1) BACKEND
+cd backend
+python -m venv .venv
+Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python -m uvicorn app.main:app --reload --port 8000
+
+2) FRONTEND (new terminal)
+cd frontend
+npm install
+npm run dev
+
+3) OPEN the Vite URL shown in the terminal (normally http://localhost:5173)
+4) Create an account.
+5) Click Run benchmark.
+6) View Results -> Analytics -> History -> Compare.
+7) Export a JSON result to compare a run from another computer.
+
+IMPORTANT
+- The browser benchmark is currently TypeScript/JavaScript, not C++/WASM.
+- The C++ reference engine is included under benchmark-engine for future Emscripten integration.
+- Cloud Analyzer analyzes imported/remote benchmark results; it does not silently run a cloud VM.
